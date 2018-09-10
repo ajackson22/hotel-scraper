@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+
+<head>
+<!-- PRELOAD - VENDOR - CSS -->
+<!-- PRELOAD - Font Awesome -->
+<link as="style" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="preload"/>
+<!-- PRELOAD - Bootstrap - Latest compiled and minified CSS -->
+<link as="style" class="SL_norewrite" href="/resources/us/en/find-hotels/dist/bundle/bootstrap-rbf-custom-ltr.a4849d90.css" rel="preload"/>
+<!-- PRELOAD - APPLICATION - CSS -->
+<link as="style" class="SL_norewrite" href="/resources/us/en/find-hotels/dist/bundle/find-hotel-ltr.f4369a6b.css" rel="preload"/>
+<!-- VENDOR - CSS -->
+<!-- Font Awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- Bootstrap - Latest compiled and minified CSS -->
+<link class="SL_norewrite" href="/resources/us/en/find-hotels/dist/bundle/bootstrap-rbf-custom-ltr.a4849d90.css" rel="stylesheet"/>
+<!-- APPLICATION - CSS -->
+<link class="SL_norewrite" href="/resources/us/en/find-hotels/dist/bundle/find-hotel-ltr.f4369a6b.css" rel="stylesheet"/>
+<meta charset="utf-8"/><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><!--[if lte IE 9]><link rel="stylesheet" href="//www.ihg.com/static/uhf/vendor.2018090501.css"><link rel="stylesheet" href="//www.ihg.com/static/uhf/global.2018090501.css"><link rel="stylesheet" href="//www.ihg.com/static/uhf/brands-only/ihg/en_US.2018090501.css"><link rel="stylesheet" href="//www.ihg.com/static/uhf/global/rtl/ie9.min.2018090501.css"><![endif]-->
+<!-- disables zooming on phones and tablets-->
+<base href="/hotels/us/en/find-hotels/"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="//www.ihg.com/static/uhf/brands/us/en/uhf.min.2018090501.css" rel="stylesheet"/>
+<!-- Resource Hints: improve performance on loading static application resources -->
+<link crossorigin="use-credentials" href="//fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="use-credentials" href="//fonts.gstatic.com" rel="preconnect"/>
+<link crossorigin="use-credentials" href="//ihg.scene7.com" rel="preconnect"/>
+<link crossorigin="use-credentials" href="//maps.googleapis.com" rel="preconnect"/>
+<link crossorigin="use-credentials" href="//maps.gstatic.com" rel="preconnect"/>
+<link crossorigin="use-credentials" href="//maxcdn.bootstrapcdn.com" rel="preconnect"/>
+<!-- Resource Hints: improve performance on pre-loading vendor and app script files -->
+<!-- Preload - VENDOR - JS -->
+<link as="script" href="/resources/us/en/find-hotels/dist/bundle/wp-loader.69b7851664c8474c1ab4.min.js" rel="preload"/>
+<link as="script" href="/resources/us/en/find-hotels/dist/bundle/vendor.ceac914d266523dfd830.min.js" rel="preload"/>
+<link as="script" href="/resources/us/en/find-hotels/dist/bundle/vendorCust.1d77ee9d9c72afe4565a.min.js" rel="preload"/>
+<link as="script" href="/resources/us/en/find-hotels/dist/bundle/app.edc1948097e93e006e1c.min.js" rel="preload"/>
+<link as="script" href="/resources/us/en/find-hotels/dist/angularResources/angular-i18n/angular-locale_en-us.js" rel="preload"/>
+<!-- ENSIGHTEN BOOTSTRAP -->
+<script src="https://nexus.ensighten.com/ihg/spaprod/Bootstrap.js"></script>
+<title>Select a Hotel</title>
+<script>
+			'use strict';
+						
+			//BEGIN APPD ADRUM CONFIGURATION
+			window['adrum-start-time'] = new Date().getTime();
+			(function(config){
+				config.appKey = 'AD-AAB-AAB-DYT';
+				config.adrumExtUrlHttp = '/resources/us/en/find-hotels/dist/adrum';
+				config.adrumExtUrlHttps = '/resources/us/en/find-hotels/dist/adrum';
+				config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
+				config.beaconUrlHttps = 'https://col.eum-appdynamics.com';
+				config.xd = {enable : true};
+			})(window['adrum-config'] || (window['adrum-config'] = {}));
+			if ('https:' === document.location.protocol) {
+				document.write(unescape('%3Cscript')
+			+ " src=" + '/resources/us/en/find-hotels/dist/adrum/adrum.js'
+			+ " type='text/javascript' charset='UTF-8'"
+			+ unescape('%3E%3C/script%3E'));
+			} else {
+				document.write(unescape('%3Cscript')
+				+ " src=" + '/resources/us/en/find-hotels/dist/adrum/adrum.js'
+			+ " type='text/javascript' charset='UTF-8'"
+			+ unescape('%3E%3C/script%3E'));
+			}
+			// END APPD CONFIGURATION
+
+			/*<![CDATA[*/
+			var AppConfigJson = '{\"appName\":\"find-hotels\",\"appVersion\":\"7.4.0\",\"baseURL\":\"/find-hotels/hotel\",\"defaultCountry\":\"us\",\"defaultLanguage\":\"en\",\"palContentDomain\":\"https://www.ihg.com\",\"defaultDomain\":\"www.ihg.com\",\"brandDomain\":\"www.ihg.com\",\"destinationsDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/locations/v1/destinations\",\"timeout\":10000,\"retry\":1,\"interval\":1,\"cache\":{\"cacheName\":\"destinationCache\",\"options\":{\"storageMode\":\"sessionStorage\",\"capacity\":100,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"maxAge\":3600000,\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"resDirectDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/cro/v1/callcenter\",\"timeout\":5000,\"retry\":0,\"interval\":1,\"cache\":{\"cacheName\":\"resDirectCache\",\"options\":{\"storageMode\":\"sessionStorage\",\"capacity\":500,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"maxAge\":3600000,\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"hotelDetailDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/hotels/v1/profiles/{hotelMnemonic}/details\",\"timeout\":10000,\"retry\":2,\"interval\":250,\"cache\":{\"cacheName\":\"hotelDetailCache\",\"options\":{\"storageMode\":\"sessionStorage\",\"capacity\":500,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"maxAge\":3600000,\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"ratePreferencesDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/rates/v1/categories\",\"timeout\":3000,\"retry\":2,\"interval\":1},\"kimptonLastMinuteDealsDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/inventory/v1/availability/last-minute-deals/KI\",\"contentTypeJSONValue\":\"application/json; charset=utf-8\",\"localeRequestHeader\":\"IHG-Language\",\"retry\":1,\"timeout\":3000},\"memberDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/members/v2/profiles/me{/sliceName}{/sliceId}\",\"timeout\":3000,\"retry\":1,\"interval\":100},\"statusDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/members/v1/status\",\"timeout\":3000,\"retry\":3,\"interval\":1},\"pslotsDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/marketing/v1/offers/pslots\",\"timeout\":5000,\"retry\":2,\"interval\":10},\"registeredOffersDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/members/v1/profiles/me/registeredOffers\",\"timeout\":5000,\"retry\":3,\"interval\":250},\"animationToggle\":{\"state\":true},\"currencyConversionsService\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/finance/v1/currencies/conversions\",\"timeout\":3000,\"retry\":3,\"interval\":1},\"availableCurrenciesService\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/finance/v1/currencies\",\"timeout\":3000,\"retry\":3,\"interval\":250},\"hotelMediaService\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/hotels/v1/profiles/{hotelMnemonic}/media\",\"timeout\":3000,\"retry\":3,\"interval\":250,\"cache\":{\"cacheName\":\"hotelMediaCache\",\"options\":{\"storageMode\":\"sessionStorage\",\"capacity\":50,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"maxAge\":3600000,\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"cocoService\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/coco/v1/events\",\"guestApiToken_name\":\"X-IHG-MWS-API-Token\",\"guestApiToken_value\":\"APIGEE\",\"timeout\":3000,\"retry\":1,\"interval\":250},\"guestAPIsearch\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/guest-api/v1/ihg/{country}/{language}/searchLight\",\"guestApiToken_name\":\"X-IHG-MWS-API-Token\",\"guestApiToken_value\":\"58ce5a89-485a-40c8-abf4-cb70dba4229b\",\"timeout\":30000,\"retry\":1,\"interval\":250,\"cache\":{\"cacheName\":\"searchResultCache\",\"options\":{\"maxAge\":120000,\"storageMode\":\"sessionStorage\",\"capacity\":20,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"availHotelSearchDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/availability/v1/hotels/offers/mock\",\"timeout\":10,\"retry\":0,\"interval\":250,\"cache\":{\"cacheName\":\"availHotelSearch\",\"options\":{\"maxAge\":120000,\"storageMode\":\"sessionStorage\",\"capacity\":20,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"availSinglePropDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/availability/v2/hotels/offers/mock\",\"timeout\":10,\"retry\":2,\"interval\":250,\"cache\":{\"cacheName\":\"availSingleProp\",\"options\":{\"maxAge\":120000,\"storageMode\":\"sessionStorage\",\"capacity\":20,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"availRatesDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/availability/v2/hotels/offers/mock\",\"timeout\":10000,\"retry\":2,\"interval\":250,\"cache\":{\"cacheName\":\"availRates\",\"options\":{\"maxAge\":120000,\"storageMode\":\"sessionStorage\",\"capacity\":20,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"guestAPIrate\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/guest-api/v1/ihg/{country}/{language}/rates\",\"guestApiToken_name\":\"X-IHG-MWS-API-Token\",\"guestApiToken_value\":\"58ce5a89-485a-40c8-abf4-cb70dba4229b\",\"timeout\":10000,\"retry\":2,\"interval\":250,\"cache\":{\"cacheName\":\"guestAPIrateCache\",\"options\":{\"maxAge\":120000,\"storageMode\":\"sessionStorage\",\"capacity\":20,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"guestAPIrules\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/guest-api/v1/ihg/{country}/{language}/rateRules\",\"guestApiToken_name\":\"X-IHG-MWS-API-Token\",\"guestApiToken_value\":\"58ce5a89-485a-40c8-abf4-cb70dba4229b\",\"timeout\":10000,\"retry\":2,\"interval\":250,\"cache\":{\"cacheName\":\"guestAPIrulesCache\",\"options\":{\"maxAge\":180000,\"storageMode\":\"sessionStorage\",\"capacity\":100,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"recycleFreq\":60000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"guestAPIAdditionalFeesDAO\":{\"url\":\"https://apis.ihg.com/guest-api/v1/ihg/hotel/{mnemonic}?type=ADDITIONALCHARGES\",\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"apiToken\":\"58ce5a89-485a-40c8-abf4-cb70dba4229b\",\"retry\":3,\"interval\":250,\"timeout\":3000,\"cache\":{\"cacheName\":\"addChargCache\",\"options\":{\"storageMode\":\"sessionStorage\",\"capacity\":10,\"enabled\":true,\"deleteOnExpire\":\"aggressive\",\"maxAge\":3600000,\"storeOnReject\":false,\"storeOnResolve\":true}}},\"log\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/logging/v1/logEntries\",\"thresholdNumber\":100,\"thresholdLevel\":\"warn\",\"thresholdTime\":30000,\"logLevels\":[\"error\",\"warn\",\"info\",\"debug\"],\"maskingWords\":[\"card\",\"cvv\",\"token\",\"expirationDate\"],\"timeout\":500,\"retry\":0,\"interval\":0},\"apiGatewayBaseDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"apiKeyRequestHeader\":\"X-IHG-API-KEY\",\"contentTypeJSONValue\":\"application/json; charset=utf-8\",\"localeRequestHeader\":\"IHG-Language\"},\"payApp\":{\"url\":\"{/brandPath}/hotels/{country}/{language}/pay/payment\"},\"hotelDetails\":{\"url\":\"https://{defaultDomain}{/hotelBrand}/hotels/{country}/{language}/{city}/{hotelMnemonic}/hoteldetail\"},\"hotelReviews\":{\"url\":\"https://{defaultDomain}{/hotelBrand}/hotels/{country}/{language}/{city}/{hotelMnemonic}/hoteldetail/hotel-reviews\"},\"customerService\":{\"worldwideReservationOfficesUrl\":\"https://{brandDomain}{/hotelBrand}/hotels/{country}/{language}/customer-care/worldwide-reservation-offices\"},\"meetings\":{\"meetUrl\":\"https://meetings.ihg.com\",\"supportUrl\":\"https://{defaultDomain}/content/{country}/{language}/support/meetings/how-to/outside-us\"},\"compareIhgBrands\":{\"url\":\"https://{defaultDomain}/hotels/{country}/{language}/global/about/brands\"},\"palLookupService\":{\"installationUrl\":\"https://apis.ihg.com/locations/v1/installations\",\"travelTypeUrl\":\"https://apis.ihg.com/military/v1/travelTypes\",\"branchesUrl\":\"https://apis.ihg.com/military/v1/branches\",\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"timeout\":3000,\"retry\":3,\"interval\":1},\"extendedStayBrands\":[\"CW\",\"SB\"],\"iataQueryParams\":[\"_PMID\",\"pmid\",\"IATAno\",\"iata\",\"icdv\",\"qIta\"],\"externalCurrencyConversionURL\":\"https://www.oanda.com/convert/classic\",\"openExchangeRateURL\":\"https://openexchangerates.org/\",\"uhfReload\":false,\"crossSellHotelsBrandId\":[\"IC\",\"UL\",\"IN\",\"CP\",\"VN\"],\"doNotDisplayHotel\":[\"SPND\",\"SPCT\",\"SP\",\"ND\"],\"doNotDisplayRoomTabs\":[\"SB\",\"CW\",\"CV\",\"VA\"],\"timeTracking\":{\"shouldLogToConsole\":true,\"shouldLogExternally\":true},\"TPIGatewayUrl\":{\"url\":\"/rewardsclub/{country}/{language}/sign-in/?fwdest={url}\"},\"delayTimeforEnsightenStart\":750,\"GHPA\":{\"icdvList\":[\"99618783\",\"99630775\",\"99630764\",\"99633833\",\"99631582\",\"99632632\",\"99630882\",\"99633424\",\"99634382\",\"99634393\",\"99634404\",\"99634426\",\"99634441\",\"99634463\",\"99615832\",\"99636110\",\"99636202\",\"99636460\",\"99636530\",\"99636600\"]},\"roomKey\":{\"connector\":\"//www.roomkey.com/js/connector/connector.js\",\"apiKey\":\"ae020d407073c7e711f5649ef9844ec4\",\"cookieName\":\"roomKeyCookie\",\"windowUrl\":\"https://www.ihg.com/redirect/rkRedirect\",\"restrictedCountryCodes\":[\"CN\"],\"restrictedRates\":[\"IVTCD\",\"IVANI\"],\"windowName\":\"IHG_Roomkey_pop\",\"cookieExpiryDays\":14},\"bulkAvailService\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/availability/v1/windows\",\"timeout\":15000,\"retry\":1,\"interval\":250},\"triptease\":{\"token\":\"6e7dd50235b6f9def5cbf723d630411f0507c358\",\"url\":\"https://paperboy.triptease.net/paperboy.js?token={APIkey}:{hotelId}\"},\"topCurrencies\":[\"USD\",\"EUR\",\"CNY\",\"GBP\"],\"roomType\":{\"cacheTTL\":500},\"featureToggle\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/channels/direct/feature-toggles/v1/com.ihg.www.find-hotels\",\"timeout\":20},\"serviceVirtualizationEnabled\":false,\"quickWins\":{\"synxisBrandCodes\":[\"spct\",\"rgnt\"],\"interstitialUriTemplate\":\"/hotels/{country}/{language}/find-hotels/interstitial?hotelCode={hotelId}\",\"hotelDetails\":\"https://www.regenthotels.com\"},\"rateUpsellsDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/rate-upsells/v1/upsells\",\"contentTypeJSONValue\":\"application/json; charset=utf-8\",\"localeRequestHeader\":\"IHG-Language\",\"timeout\":3000},\"brandPath\":null,\"brand\":{\"brandCode\":\"6c\",\"brandName\":\"InterContinental Hotels Group\",\"consolidatedDomainPath\":\"\"},\"locale\":{\"country\":\"us\",\"language\":\"en\",\"localeString\":\"en_US\"},\"country\":\"us\",\"language\":\"en\",\"shtfURL\":\"/us/en/error_500.html\",\"server\":\"10.212.101.88\"}';
+			/*]]>*/
+            var customAppConfigJson = sessionStorage ? sessionStorage.getItem("customAppConfig-find-hotels") : null;
+			var AppConfig;
+			if(AppConfigJson) {
+				AppConfig = JSON.parse(customAppConfigJson || AppConfigJson);
+				var direction = 'ltr';
+				AppConfig.direction = direction || 'ltr';
+			}
+
+			function logErrorAndRedirectToSHTF(errMessage) {
+				if(typeof angular === 'undefined') {
+					try {
+						var message = errMessage || 'Angular not loaded';
+						throw message;
+					} catch (err) {
+						console.error(err);
+						window.location.href = AppConfig.shtfURL;
+					}
+				}
+			}
+			var angularLoadedTimer = setTimeout(function() {
+				logErrorAndRedirectToSHTF('AngularJs load timeout');
+			}, 20000);
+
+			document.addEventListener('DOMContentLoaded', function () {
+				clearTimeout(angularLoadedTimer);
+				logErrorAndRedirectToSHTF();
+			}, false);
+		</script>
+<!-- VENDOR - JS -->
+<script src="/resources/us/en/find-hotels/dist/bundle/wp-loader.69b7851664c8474c1ab4.min.js"></script>
+<script src="/resources/us/en/find-hotels/dist/bundle/vendor.ceac914d266523dfd830.min.js"></script>
+<script src="/resources/us/en/find-hotels/dist/bundle/vendorCust.1d77ee9d9c72afe4565a.min.js"></script>
+<script src="/resources/us/en/find-hotels/dist/bundle/app.edc1948097e93e006e1c.min.js"></script>
+<script src="/resources/us/en/find-hotels/dist/angularResources/angular-i18n/angular-locale_en-us.js"></script>
+</meta></head>
+<body>
+<header class="uhf-6c uhf_headerFooter sl_whiteout" id="uhf_headerWrapper"><div class="uhf_header_utility_bar"><!-- (empty currentStyle.travelAdvisoryLink ) && -->
+<input id="UHF_country" type="hidden" value="us"/>
+<input id="UHF_language" type="hidden" value="en"/>
+<input id="UHF_brand" type="hidden" value="6c"/>
+<div class="darkenContent"></div>
+<div class="sessionWillExpire notificationBar" id="sessionTimeoutCounter">
+<div class="container">
+<div class="row">
+<div class="sessionWillExpireCol col-xs-12">
+<span class="sessionWillExpireText">
+<i class="expireWarningIcon fa fa-exclamation-triangle"></i>
+							Your session will expire in <span class="minutes bold" id="numMinutesLeft">5</span> <span id="minutesText">minutes</span>, <span class="seconds bold" id="numSecondsLeft">0</span> <span id="secondsText">seconds</span>, due to inactivity.</span>
+<a class="sessionWillExpireLink" href="javascript:void(0);" id="staySignedInLink">Stay Logged In</a>
+</div>
+</div>
+</div>
+</div>
+<div hidden="true" id="uhf_countryLanguagePushDown">
+<div class="container" id="uhf_countryLanguagePushDownContainer">
+<span data-uhf-clp="description">You're currently viewing this site in a different language. Would you like this to make your default language? </span>
+<span class="buttonContainer">
+<button data-uhf-clp="pdYes" id="uhf_countryLanguagePushDown_yes" value="Yes">YES</button>
+<button data-uhf-clp="pdYes" hidden="true" id="uhf_langNotSupported_yes" value="Yes">YES</button>
+<button data-uhf-clp="pdNo" id="uhf_countryLanguagePushDown_no" value="No">NO</button>
+</span>
+<div class="subText" data-uhf-clp="subDescription">You can change your country and language settings in the future by using the selector at the top of the page.</div>
+<button id="uhf_countryLanguagePushDownClose" value="No"><i class="fa fa-times buttonClose"></i></button>
+</div>
+</div>
+<!-- UHF : START of Utility bar markup -->
+<div class="utilityNavWrapper visible-sm visible-md visible-lg">
+<div class="utilityNavContainer container">
+<div class="row">
+<div class="col-md-12 clearfix">
+<nav class="utilityNav">
+<ul class="utilityNav-list u-list clearfix">
+<li class="utilityNav-list-item u-list-item">
+<a class="utilityNav-link u-link nav-middle resDirectIcon-link" data-no-replace="content" data-uhf-hook="resDirectNumber" data-uhf-hook-two="mobileResDirectLink" data-uhftrigger="nothing" href="tel:18778343613"><i class="fa fa-phone" style="font-size: 1.3em; vertical-align: middle; padding-right: .3em;"></i></a>
+<span class="utilityNav-link u-link nav-middle resDirectNum-link" data-uhf-hook="resDirectNumber"></span>
+</li>
+<li class="utilityNav-list-item u-list-item">
+<a class="utilityNav-link u-link nav-middle uhfpopup" href="http://customerservice.ihg.com/ihg/bot.html?isJSEnabled=1&amp;brandcode=6c&amp;businessArea=Root.IHG" rel="nofollow" title="Need Help?">Need Help?</a>
+</li>
+<li class="utilityNav-list-item u-list-item">
+<a class="utilityNav-link u-link nav-middle " href="//www.ihg.com/hotels/us/en/global/customer_care/travel_advisory" title="Travel Advisory">Travel Advisory</a>
+</li>
+<li class="utilityNav-resDir-item utilityNav-list-item u-list-item" data-uhf-hook="resDirectMessage" hidden="true">
+<span class="utilityNav-message utilityNav-link u-link nav-middle">Costs 13p per minute + phone company's access charge</span>
+<a class="tooltipQuestion hasBlankPopover utilityNav-link nav-middle" data-animation="true" data-content="Calls to 0871 numbers, when dialed from the UK, cost 13p per minute. Standard network rates apply. Calls from mobiles will be higher." data-placement="auto" data-toggle="popover" data-trigger="focus" href="javascript:void(0);" tabindex="0"><i class="fa fa-question-circle"></i></a>
+</li>
+</ul>
+</nav>
+<div class="logIn">
+<div class="utilityNav-list-item u-list-item">
+<a class="utilityNav-link language u-link nav-middle " data-placement="bottom" data-toggle="popover" data-trigger="click" href="javascript:void(0);" id="uhfCountryLanguageLink">
+<img alt="language-icon" class="language-icon nav-middle"/>
+<span class="language-text nav-middle"></span>
+<i class="fa fa-angle-down nav-middle"></i>
+</a>
+</div>
+<div class="logIn-anonymous logIn-State">
+<a class="logIn-link" data-uhf-hook="signInToggle" href="javascript:void(0);" title="Sign In">Sign In</a>
+<span>/</span>
+<a class="logIn-link" data-uhf-hook="joinRewardsClub" href="//www.ihg.com/rewardsclub/us/en/join" title="Join">Join</a>
+</div>
+<div class="logIn-implicit logIn-State">
+<a class="logIn-link logOut notYou" data-uhf-rememberme="false" href="javascript:void(0);" title="Not you?">Not you?</a>
+<div class="logIn-link-divider"></div>
+<a class="logIn-link logIn-block" data-uhf-hook="signInToggle" href="javascript:void(0);">
+<div><span>Sign In</span></div>
+<div><span class="user-first-name">user first name</span></div>
+</a>
+</div>
+<div class="logIn-explicit logIn-State">
+<a class="logIn-link logOut" data-uhf-rememberme="cookie" href="javascript:void(0);">Sign Out</a>
+<div class="logIn-link-divider"></div>
+<a class="logIn-link logIn-block" href="//www.ihg.com/rewardsclub/us/en/account-mgmt/home">
+<div><span class="user-first-name">user first name</span></div>
+<div><span class="user-points">user points</span> Points</div>
+</a>
+</div>
+<a class="logIn-link logIn-link-logo" data-uhf-hook="walletToggle" href="javascript:void(0);"><img alt="IHG Rewards Club" class="logIn-logo rewardsClubLogo" src="//ihg.scene7.com/is/image/ihg/uhf_IHG_Logo_Sign_In_Screen-1?fmt=png-alpha"/></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- UHF : moved hamburger menu to brand nav jsp from here -->
+<!-- UHF: Wallet -->
+<!-- UHF: Wallet Container -->
+<div class="wallet walletTransition" data-currentstate="anonymous" data-previousstate="anonymous">
+<!-- UHF: Wallet - Prompt Sign In -->
+<!--
+			<div class="wallet-state wallet-logInToContinue wallet-view">
+				<form role="form">
+					<fieldset>
+
+
+					</fieldset>
+				</form>
+			</div>
+			-->
+<!-- / UHF: Wallet - Prompt Sign In -->
+<!-- UHF: Wallet - Login Shared - Used by Anonymous/Implicit/Succsss(x2) Views -->
+<div class="wallet-state wallet-login-shared wallet-view">
+<!-- UHF: Sign In form -->
+<form role="form">
+<fieldset>
+<div class="row form-dark-row">
+<div class="col-xs-11 wallet-head">
+<div class="form-group wallet-anonymous wallet-logInToContinue wallet-view">
+<span class="titleFont">Sign In</span>
+</div>
+<div class="form-group wallet-implicit wallet-view">
+<span class="titleFont">Sign In, <span class="user-first-name"></span></span>
+<span class="formLink"><a class="notYou logOut" data-uhf-rememberme="false" href="javascript:void(0);">Not you?</a></span>
+</div>
+<div class="form-group wallet-createPinSuccess wallet-view">
+<span class="titleFont">Sign In</span>
+</div>
+<div class="form-group wallet-forgotPinSuccess wallet-view">
+<span class="titleFont">Sign In</span>
+</div>
+</div>
+<div class="col-sm-1 slideBtnContainer">
+<i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+</div>
+</div>
+<div class="accentLine"></div>
+<div class="row wallet-logInToContinue wallet-view">
+<div class="col-xs-6 uhfCancelContainer">
+<div class="form-group cancelPromptLogin uhfCancel">
+<span class="formLink">
+<a href="javascript:void(0);"><i class="fa fa-chevron-circle-left"></i>Cancel</a>
+</span>
+</div>
+</div>
+</div>
+<div class="row successContainer well wallet-createPinSuccess wallet-view">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-check-circle-o"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<span class="helpInstructionsSuccess">Congratulations! You successfully created a PIN.Use your PIN to Sign In to your IHG<sup>®</sup> Rewards Club account.</span>
+</div>
+</div>
+</div>
+<div class="row successContainer well wallet-forgotPinSuccess wallet-view">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-check-circle-o"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<span class="helpInstructionsSuccess">Success! We emailed your PIN to the
+										email address associated with your IHG<sup>®</sup> Rewards Club account...
+										Check your email to obtain your PIN and sign in.</span>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgDefault">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+                                        Unexpected Server Error</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgContainer">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										Your session has expired. Please sign in to your profile</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										We are sorry, our system is temporarily unavailable.  Please try again later or contact the <a href="/hotels/us/en/customer-care/contact-us">IHG<sup>®</sup> Rewards Club Customer Care Center</a> for assistance.</div>
+</div>
+</div>
+</div>
+<div class="row wallet-logInToContinue wallet-view">
+<div class="col-sm-12">
+<div class="form-group">
+<span class="joinFont">Not an IHG<sup>®</sup> Rewards Club Member?</span>
+</div>
+</div>
+</div>
+<div class="row wallet-logInToContinue wallet-view">
+<div class="col-sm-12 text-center">
+<div class="form-group">
+<button class="btn btn-success btnFluid btnWallet joinNow" type="button">Join Now</button>
+</div>
+</div>
+</div>
+<div class="row wallet-logInToContinue wallet-view">
+<div class="col-sm-12">
+<div class="form-group">
+<span class="custom-text text-center">or</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label for="UHF_username">Email or Member #</label>
+<input class="form-control" id="UHF_username" name="username" placeholder="Email or Member #" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label class="pin" for="UHF_password">PIN #</label>
+<input class="form-control" id="UHF_password" maxlength="4" name="password" placeholder="Enter PIN #" size="4" type="password" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group smallfont">
+<div class="rememberMeContainer checkbox">
+<label><input checked="checked" id="cookieFlag" name="cookieFlag" type="checkbox"/>Remember Me<span class="checkbox-color"></span></label>
+</div>
+<!--<div class="forgotPinContainer formLink">
+										<label><a class="forgotPin" href="#0">Forgot PIN?</a></label>
+									</div> -->
+<div class="retrievePinContainer formLink">
+<label><a class="retrievePin" href="//www.ihg.com/hotels/us/en/customer-care/forms/retrieve-pin">Retrieve Pin</a></label>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 text-center">
+<div class="form-group">
+<button autocomplete="off" class="btn btn-primary btnFluid btnWallet signIn" type="button">Sign In</button>
+</div>
+</div>
+</div>
+<div class="row wallet-anonymous wallet-view">
+<div class="col-sm-12 text-center">
+<div class="form-group">
+<button class="createPIN" type="button">
+<p>Joined IHG<sup>®</sup> Rewards Club at a Hotel?</p>
+<span>Create a PIN</span>
+</button>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+<!-- UHF: Join Now form -->
+<form role="form">
+<fieldset>
+<div class="row wallet-anonymous wallet-view">
+<div class="col-sm-12">
+<div class="form-group">
+<span class="joinFont">Not an IHG<sup>®</sup> Rewards Club Member?</span>
+<span class="formLink"><a href="//www.ihg.com/rewardsclub/us/en/join">Join Now</a></span>
+<p>Joining is easy and free</p><p>Earn points at over 5,200 hotels</p><p>Redeem points for free rooms and more</p><!-- Extra kimpton karma text on wallet sign in -->
+</div>
+</div>
+</div>
+<div class="row wallet-anonymous wallet-view">
+<div class="col-sm-12 text-center">
+<div class="form-group">
+<button class="btn btn-success btnFluid btnWallet joinNow" type="button">Join Now</button>
+</div>
+</div>
+</div>
+<div class="row wallet-anonymous wallet-implicit wallet-view">
+<div class="col-sm-6 gridButtonContainer">
+<div class="form-group">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/home" title="Learn about IHG&lt;sup&gt;®&lt;/sup&gt; Rewards Club">
+<div class="rcIconContainer">
+<div class="learnIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer">
+<span class="gridButton-text">
+													Learn about IHG<sup>®</sup> Rewards Club</span>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 gridButtonContainer">
+<div class="form-group">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/earn-rewards" title="Earn Rewards">
+<div class="rcIconContainer">
+<div class="earnIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer"><span class="gridButton-text">Earn Rewards</span></div>
+</a>
+</div>
+</div>
+</div>
+<!-- if condition has been done to modify the order of icons in wallet for kimpton -->
+<div class="row wallet-anonymous wallet-implicit wallet-view">
+<div class="col-sm-6 gridButtonContainer">
+<div class="form-group">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/redeem-rewards" title="Redeem Rewards">
+<div class="rcIconContainer">
+<div class="redeemIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer"><span class="gridButton-text">Redeem Rewards</span></div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 gridButtonContainer">
+<div class="form-group">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/enjoy-rewards" title="Enjoy Benefits">
+<div class="rcIconContainer">
+<div class="enjoyIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer"><span class="gridButton-text">Enjoy Benefits</span></div>
+</a>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+<!-- / UHF: Wallet - Login Shared - Used by Anonymous/Implicit/Succsss(x2) Views -->
+<!-- UHF: Wallet - Explicit -->
+<div class="wallet-state wallet-explicit wallet-view">
+<!-- UHF: Wallet Accordian -->
+<form role="form">
+<fieldset>
+<div class="row form-dark-row">
+<div class="wallet-head">
+<script id="walletHead-template" type="text/x-handlebars-template">
+                                    <a class="titleFont memberName" href="//www.ihg.com/rewardsclub/us/en/account-mgmt/home">
+									{{walletProfile.firstName}} {{walletProfile.lastName}}
+									</a>
+
+									<div class="logOutContainer">
+  										<a class="logOut" data-uhf-rememberMe="cookie" href="javascript:void(0);">
+                                          Sign Out</a>
+									</div>
+									<div class="memberNumber">
+										<span>Member #:</span>
+										<span>
+										{{walletProfile.priorityClubNumber}}
+										</span>
+									</div>
+								</script>
+</div>
+<div class="slideBtnContainer">
+<i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+</div>
+</div>
+<div class="accentLine"></div>
+<div class="memberLevel">
+<script id="walletMemLevel-template" type="text/x-handlebars-template">
+							<span class="memberLevel-text {{walletProfile.membershipLevel}}">{{walletProfile.memberLevelDisplay}}</span>
+							</script>
+</div>
+<div class="pointsBalance walletSlot">
+<div class="pointsBalanceContainer">
+<a href="//www.ihg.com/rewardsclub/us/en/account-mgmt/home">
+<script id="walletPointsBal-template" type="text/x-handlebars-template">
+									<div
+										class="pie_progress"
+										role="progressbar"
+										data-goal="{{pbAnim data.walletProfile.pointsBalance data.walletProfile.pointsForTopLevel}}"
+										data-goalLocalized="{{data.walletProfile.localizedPointsBalance}}"
+										data-barcolor="{{trackerColor data.walletProfile.membershipLevelCode}}"
+										aria-valuemin="0"
+										aria-valuemax="{{data.walletProfile.pointsForTopLevel}}"
+										aria-valuenow="0">
+                                    	<div class="pie_progress__label">Points Balance</div>
+										<div class="pie_progress__number">0</div>
+									</div>
+									<span class="walletSlotCTA"><i class="fa fa-chevron-circle-right "></i></span>
+								</script>
+</a>
+</div>
+</div>
+<!-- Start Copperfield  bdefnall Project Copperfield -->
+<div class="walletSlot" id="explicitMsgContainer">
+<div class="dynamicMessagingInteract" id="rc_wallet_1">
+</div>
+</div>
+<!-- End Copperfield -->
+<!-- Start RC 2.0 - Moved Manage Your Account to here -->
+<div class="walletSlot">
+<div class="wallet-container container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="manageAccount">
+<a class="btn btn-primary btnFluid btnWallet" href="//www.ihg.com/rewardsclub/us/en/account-mgmt/home" title="Manage Your Account">Manage Your Account</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End RC 2.0 -  Moved Manage Your Account to here -->
+<div class="walletSlot" id="upComingResContainer">
+<script id="upComingRes-template" type="text/x-handlebars-template">
+                            <div class="upComingRes" data-uhf-url="{{upComingResURL}}">
+                                <div class="explicit-header">Upcoming reservation</div>
+                                <div class="upComingRes-Messaging">
+									<div class="brandPropertyInfoContainer">
+										<img class="hotelImg" src="{{hotelImg}}" data-uhf-url="{{hotelURL}}">
+										<div class="brandHotelContainer">
+											<img class="propertyLogo" src="{{propertyLogo}}">
+											<div class="hotelName">{{hotelName}}</div>
+										</div>
+									</div>
+
+                                    <div class="resInfo">
+                                        <div class="checkIn">
+                                            <span class="desc">Check-in Date</span>
+                                            <span class="date">{{checkInDate}}</span>
+                                            <span class="time">@ {{checkInTime}}</span>
+                                        </div>
+
+                                        <div class="checkOut">
+                                            <span class="desc">Check-out Date</span>
+                                            <span class="date">{{checkOutDate}}</span>
+                                            <span class="time">@ {{checkOutTime}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="walletSlotCTA" href="{{upComingResURL}}"><i class="fa fa-chevron-circle-right "></i></a>
+                            </div>
+                            </script>
+</div>
+<!-- Start EBA -->
+<div class="walletSlot">
+<!-- not to load "how to earn more points" for kimpton but for other brands, if kimpton wants to display this message then remove if condition check   -->
+<div class="ebaContainer container-fluid">
+<script id="walletEBA-template" type="text/x-handlebars-template">
+                            <a href="//www.ihg.com/rewardsclub/us/en/account-mgmt/home" class="walletSlotLink">
+                        	<div class="row">
+                                <div class="explicit-header">How can you earn <span class="bold">{{nextLevel}}</span>?</div>
+                        	</div>
+
+							<!-- Start RC 2.0 Changes - Nights/Point section-->
+
+							<div class="row">
+                        		<div class="additionalItems col-xs-12 col-ihg-tablet-3 col-sm-3 col-md-3">
+                        			<div class="ebaPadding">
+	                        			<div class="additionalBlock">
+		                        			<div class="circle {{nextLevelCircle}}">
+		                        				<span class="circleInner">{{nightsToNextLevel}}</span>
+		                        			</div>
+		                       			</div>
+	                        		</div>
+                    				 <p class="additionalText">more nights</p>
+                        		</div>
+                        		<div class="youCanAlso col-xs-12 col-ihg-tablet-9 col-sm-9 col-md-9">
+	                        		<div class="ebaPadding-youCanAlso">
+		                        		<div class="youCanALsoElement">
+		                        			<span class="youCanAlsoHeading">You can also earn {{nextLevel}} with:</span>
+		                        			<ul class="youCanAlsoList list-unstyled">
+		                        				<li>{{pointsRemainingToNextLevel}} more points</li>
+		                        			</ul>
+		                        		</div>
+	                        		</div>
+                        		</div>
+                        	</div>
+
+							<!-- End RC 2.0 Changes -->
+
+							<!-- RC 2.0 - Comment start -->
+							<!-- RC 2.0 - Comment end -->
+
+							<span class="walletSlotCTA"><i class="fa fa-chevron-circle-right "></i></span>
+                        </a>
+						</script>
+</div>
+<!-- LMD for kimpton was supposed to come from interact since GT had no time give it, it will added in code for kimpton for Phase one release Jan 2017, need to remove once we get interact also add JS for interact    -->
+</div>
+<!-- End EBA -->
+<!-- START - US10687 | 2016 GIE: Wallet (Add Offer Component) -->
+<div class="offerSlot" id="explicitMsgContainer2">
+<div id="rc_wallet_2"></div>
+</div>
+<!-- END - US10687 | 2016 GIE: Wallet (Add Offer Component) -->
+<div class="walletSlot">
+<div class="wallet-container container-fluid">
+<div class="row wallet-explicit wallet-view">
+<div class="col-sm-6 gridButtonContainer">
+<div class="">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/home" title="Learn about IHG&lt;sup&gt;®&lt;/sup&gt; Rewards Club">
+<div class="rcIconContainer">
+<div class="learnIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer">
+<span class="gridButton-text">
+															Learn about IHG<sup>®</sup> Rewards Club</span>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 gridButtonContainer">
+<div class="">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/earn-rewards" title="Earn Rewards">
+<div class="rcIconContainer">
+<div class="earnIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer">
+<span class="gridButton-text">Earn Rewards</span></div>
+</a>
+</div>
+</div>
+</div>
+<!-- if condition has been done to modify the order of icons in wallet for kimpton -->
+<div class="row wallet-explicit wallet-view">
+<div class="col-sm-6 gridButtonContainer">
+<div class="">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/redeem-rewards" title="Redeem Rewards">
+<div class="rcIconContainer">
+<div class="redeemIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer"><span class="gridButton-text">Redeem Rewards</span></div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 gridButtonContainer">
+<div class="">
+<a class="gridButton" href="//www.ihg.com/rewardsclub/us/en/enjoy-rewards" title="Enjoy Benefits">
+<div class="rcIconContainer">
+<div class="enjoyIcon rcIcon"></div>
+</div>
+<div class="gridTextContainer"><span class="gridButton-text">Enjoy Benefits</span></div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+<!-- / UHF: Wallet - Explicit -->
+<!-- UHF: Wallet - Create PIN -->
+<div class="wallet-state wallet-createPin wallet-view">
+<!-- UHF: Create PIN form -->
+<form role="form">
+<fieldset>
+<div class="row form-dark-row">
+<div class="col-xs-10 wallet-head">
+<div class="form-group">
+<span class="titleFont">Create PIN</span>
+</div>
+</div>
+<div class="col-sm-1 slideBtnContainer">
+<i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+</div>
+</div>
+<div class="accentLine"></div>
+<div class="row">
+<div class="col-xs-6 uhfCancelContainer">
+<div class="form-group cancelCreatePin uhfCancel">
+<span class="formLink">
+<a href="javascript:void(0);"><i class="fa fa-chevron-circle-left"></i>Cancel</a>
+</span>
+</div>
+</div>
+<div class="col-xs-6">
+<div class="form-group">
+<span class="helpFont">All fields are required</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<span class="helpInstructions">If you joined IHG<sup>®</sup> Rewards Club at a hotel,
+										then you will need to create a 4-digit
+										PIN in order to access your IHG<sup>®</sup> Rewards Club account.</span>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgDefault">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+                                            Unexpected Server Error</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgContainer">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										Your session has expired. Please sign in to your profile</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										We are sorry, our system is temporarily unavailable.  Please try again later or contact the <a href="/hotels/us/en/customer-care/contact-us">IHG<sup>®</sup> Rewards Club Customer Care Center</a> for assistance.</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6 col-xs-percent createPin-memberNumberContainer">
+<div class="form-group">
+<label for="UHF_createPinPcrNumber">Member #:</label>
+<input class="form-control" id="UHF_createPinPcrNumber" name="pcrNumber" placeholder="Member #:" type="text" value=""/>
+</div>
+</div>
+<div class="col-xs-6 col-xs-percent createPin-zipCodeContainer">
+<div class="form-group">
+<label for="UHF_zipCode">Zip / Postal Code</label>
+<input class="form-control" id="UHF_zipCode" name="zipCode" placeholder="Zip / Postal Code" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label class="pin" for="UHF_firstName">First Name</label>
+<input class="form-control" id="UHF_firstName" name="uhf_firstName" placeholder="First Name" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label class="pin" for="UHF_lastName">Last Name</label>
+<input class="form-control" id="UHF_lastName" name="uhf_lastName" placeholder="Last Name" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6 createPin-pinContainer">
+<div class="form-group">
+<label class="pin" for="UHF_pinNumber">PIN</label>
+<input class="form-control" id="UHF_pinNumber" maxlength="4" name="pin" placeholder="Enter PIN #" size="4" type="password" value=""/>
+</div>
+</div>
+<div class="col-sm-6 createPin-verifyPinContainer">
+<div class="form-group">
+<label class="pin" for="UHF_verifyPin">Verify PIN</label>
+<input class="form-control" id="UHF_verifyPin" maxlength="4" name="verifyPin" placeholder="Enter PIN #" size="4" type="password" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<span class="helpInstructions lighterText">The 4-digit numbers entered must match.</span>
+</div>
+</div>
+</div>
+<div class="row formBottomButton">
+<div class="col-sm-12 text-center">
+<div class="form-group">
+<button class="btn btn-success btnFluid btnWallet createNewPin" type="button">Create PIN</button>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+<!-- Create Email Dialog -->
+<div aria-hidden="true" class="modal fade" data-backdrop="false" id="modalCreateEmail" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true"><i class="fa fa-times"></i></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="modalCreateEmailLabel">Create Email</h4>
+</div>
+<div class="modal-body">
+<div class="row errorTopMsg errorTopMsgDefault">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+												Unexpected Server Error</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgContainer">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										Your session has expired. Please sign in to your profile</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										We are sorry, our system is temporarily unavailable.  Please try again later or contact the <a href="/hotels/us/en/customer-care/contact-us">IHG<sup>®</sup> Rewards Club Customer Care Center</a> for assistance.</div>
+</div>
+</div>
+</div>
+<form role="form">
+<fieldset>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label for="UHF_email">Email Address</label>
+<input class="form-control" id="UHF_email" name="email" placeholder="Email Address" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label for="UHF_verifyEmail">Verify Email Address</label>
+<input class="form-control" id="UHF_verifyEmail" name="verifyEmail" placeholder="Verify Email Address" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<button class="btn btn-success btnWalletDlg btnFluid btnWallet createNewEmail" type="button">Create Email</button>
+<button class="btn btn-default btnWalletDlg btnFluid btnWalletDefault" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- / Create Email Dialog -->
+</div>
+<!-- / UHF: Wallet - Create PIN -->
+<!-- UHF: Wallet - Forgot PIN -->
+<div class="wallet-state wallet-forgotPin wallet-view">
+<!-- UHF: Forgot PIN form -->
+<form role="form">
+<fieldset>
+<div class="row form-dark-row">
+<div class="col-xs-10 wallet-head">
+<div class="form-group">
+<span class="titleFont">Forgot PIN?</span>
+</div>
+</div>
+<div class="col-sm-1 slideBtnContainer">
+<i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+</div>
+</div>
+<div class="accentLine"></div>
+<div class="row">
+<div class="col-xs-6 uhfCancelContainer">
+<div class="form-group cancelCreatePin uhfCancel">
+<span class="formLink">
+<a href="javascript:void(0);"><i class="fa fa-chevron-circle-left"></i>Cancel</a>
+</span>
+</div>
+</div>
+<div class="col-xs-6">
+<div class="form-group">
+<span class="helpFont">All fields are required</span>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgDefault">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										Unexpected Server Error</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg errorTopMsgContainer">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText"></div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										Your session has expired. Please sign in to your profile</div>
+</div>
+</div>
+</div>
+<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+<div class="form-group">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+</div>
+<div class="col-xs-10 col-xs-percent messageContainer">
+<div class="form-group">
+<div class="errorTopMsgText">
+										We are sorry, our system is temporarily unavailable.  Please try again later or contact the <a href="/hotels/us/en/customer-care/contact-us">IHG<sup>®</sup> Rewards Club Customer Care Center</a> for assistance.</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label for="UHF_forgotPinPcrNumber">Member #:</label>
+<input class="form-control" id="UHF_forgotPinPcrNumber" name="pcrNumber" placeholder="Member #:" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label for="UHF_forgotPinEmailAddr">Email Address</label>
+<input class="form-control" id="UHF_forgotPinEmailAddr" name="emailAddress" placeholder="Email Address" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 text-center">
+<div class="form-group">
+<button class="btn btn-success btnFluid btnWallet btnForgotPin" type="button">Email PIN</button>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<span class="joinFont">Don't have an email address in your profile?</span>
+<p>Contact your local <span class="paragraphLink"><a href="/hotels/us/en/customer-care/contact-us">IHG® Rewards Club Customer Care</a></span> to source your PIN and to update your profile with your email address. When you receive your PIN you can also update your email address via <span class="paragraphLink"><a href="//www.ihg.com/updateemail">www.ihg.com/updateemail</a></span>.</p>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+<!-- / UHF: Wallet - Forgot PIN -->
+</div>
+<!-- / UHF: Wallet Container -->
+<!-- / UHF: Wallet -->
+<!-- UHF : moved brand nav to brand nav jsp from here -->
+<!-- UHF : END of Utility bar markup -->
+</div>
+<!-- UHF : START of Brand navigation bar markup -->
+<!-- START : Only UBE Brand Nav -->
+<!-- UHF : START of Hamburger menu -->
+<div class="mobileNavManuWrapper hidden-sm hidden-md hidden-lg hidden-xl wrapper-UBE">
+<div class="mobileNavMenuContainer container">
+<div class="row">
+<div class="brandLogo">
+<a class="brandLogo-link" href="//www.ihg.com/hotels/us/en/reservation" title="InterContinental Hotels Group">
+<img alt="InterContinental Hotels Group" class="brandLogo-image" src="//ihg.scene7.com/is/image/ihg/uhf_ihg_logo@2x-1?fmt=png-alpha">
+</img></a>
+</div>
+<div class="mobileNav ">
+<a class="mobileNav-link menuCTA" href="javascript:void(0);"><i class="fa fa-bars fa-2x"></i></a>
+</div>
+<div class="logIn logIn-mobile ">
+<div class="logIn-anonymous logIn-State">
+<a class="logIn-link" data-uhf-hook="signInToggle" href="javascript:void(0);" title="Sign In">Sign In</a>
+<span>/</span>
+<a class="logIn-link" href="//www.ihg.com/rewardsclub/us/en/join" title="Join">Join</a>
+</div>
+<a class="logIn-link logIn-implicit logIn-State" data-uhf-hook="signInToggle" href="javascript:void(0);" title="Sign In">
+                            Sign In<div class="first-name-container"><span class="user-first-name">user first name</span></div>
+</a>
+<div class="logIn-explicit logIn-State">
+<a class="logIn-link logIn-block" href="#">
+<div class="first-name-container"><span class="user-first-name">user first name</span></div>
+<div><span class="user-points">user points</span> Points</div>
+</a>
+</div>
+</div>
+<div class="mobileNav ">
+<a class="mobileNav-link mobileResDirectNumber" data-no-replace="content" data-uhf-hook="resDirectNumber" data-uhf-hook-two="mobileResDirectLink" data-uhftrigger="0871Disc" href="tel:18778343613"><i class="fa fa-phone fa-2x"></i></a>
+</div>
+</div>
+<div class="row">
+<div class="hidden-sm hidden-md hidden-lg hidden-xl clearfix">
+<div class="mobileNavContainer">
+<div class="mobileNavInner mobileNav-hidden">
+<div class="mobileNavMenu">
+<!-- START : Hamburger : Mobile Brand nav menu -->
+<ul class="mobileNavMenu-list list-unstyled">
+<li class="mobileNavHeading">
+<ul class="mobileNavMenu-subList list-unstyled uhfmobilebrandnav">
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link " href="//www.ihg.com/destinations/us/en/explore">Locations</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link " href="//www.ihg.com/content/us/en/reservations">Stay</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link " href="//www.ihg.com/content/us/en/offers">Offers</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link " href="//meetings.ihg.com" target="_blank">Meetings</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link " href="//www.ihg.com/content/us/en/about/brands">Our Brands</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link " href="//www.ihg.com/rewardsclub/content/us/en/home">IHG® Rewards Club</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link rc myAccount" href="#">My Account</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link rc signIn" href="#">Sign In</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink site-int-link rc signOut" href="#">Sign Out</a>
+</li>
+</ul>
+</li>
+<!-- END : Hamburger : Mobile Brand nav menu -->
+<!-- START : Hamburger : Mobile Hotel Details nav menu -->
+<!-- END : Hamburger : Mobile Hotel Details nav menu -->
+</ul>
+<ul class="mobileNavMenu-list list-unstyled">
+<li>
+<ul class="mobileNavMenu-subList list-unstyled uhftravel-cc">
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink" href="http://customerservice.ihg.com/ihg/bot.html?isJSEnabled=1&amp;brandcode=6c&amp;businessArea=Root.IHG" title="Need Help?">Need Help?</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink" href="//www.ihg.com/hotels/us/en/global/customer_care/travel_advisory" title="Travel Advisory">Travel Advisory</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink" href="//www.ihg.com/hotels/us/en/reservation/ManageYourStay" title="Manage Reservations">Manage Reservations</a>
+</li>
+<li class="mobileNavMenu-list-item">
+<a class="mobileNavLink" href="#" id="feedbackQs" target="_blank">Feedback</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="mobileNavCL">
+<a class="language " href="javascript:void(0);" id="uhfCountryLanguageMobileLink"><img alt="language-icon" class="language-icon"/> <span class="language-text"></span> <i class="fa fa-angle-down"></i></a>
+<div class="" id="uhfCountryLanguageMobileContainer">
+<!-- UHF country/language markup -->
+<div id="uhfLocale">
+<div id="uhfLocaleSelection">
+<form action="" id="uhfLocaleSelectionForm" method="post">
+<div id="uhfCountrySelectionContainer">
+<label for="uhfCountrySelection">Country / Region</label>
+<select id="uhfCountrySelection"></select>
+</div>
+<div id="uhfLanguagesSelectionContainer">
+<label for="uhfLanguageSelection">language</label>
+<select id="uhfLanguageSelection"></select>
+</div>
+<a href="javascript:void(0);" id="uhfCountryLanguageCTA">
+<button class="buttonSave" type="button">save</button>
+<i class="fa fa-times"></i>
+</a>
+</form>
+<div id="uhfCountryLanguageImageContainer"></div>
+</div>
+</div>
+<!--  end of country language  -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- UHF : END of Hamburger menu -->
+<!-- UHF : Desktop : START of brand nav -->
+<div class="brandLogoNavWrapper visible-sm visible-md visible-lg uhf-walletPushOver primary-nav wrapper-UBE" id="primary-nav">
+<div class="brandLogoNavContainer container">
+<div class="row">
+<div class="col-md-12 clearfix">
+<div class="brandLogo">
+<a class="brandLogo-link" href="//www.ihg.com/hotels/us/en/reservation" title="InterContinental Hotels Group">
+<img alt="InterContinental Hotels Group" class="brandLogo-image" src="//ihg.scene7.com/is/image/ihg/uhf_ihg_logo@2x-1?fmt=png-alpha"/>
+</a>
+</div>
+<div class="brandNavContainer visible-sm visible-md visible-lg">
+<nav class="brandNav">
+<ul class="brandNav-list u-list clearfix">
+<li class="brandNav-list-item u-list-item">
+<a class="brandNav-link u-link site-int-link" href="//www.ihg.com/destinations/us/en/explore">Locations</a>
+</li>
+<li class="brandNav-list-item u-list-item">
+<a class="brandNav-link u-link site-int-link" href="//www.ihg.com/content/us/en/reservations">Stay</a>
+</li>
+<li class="brandNav-list-item u-list-item">
+<a class="brandNav-link u-link site-int-link" href="//www.ihg.com/content/us/en/offers">Offers</a>
+</li>
+<li class="brandNav-list-item u-list-item">
+<a class="brandNav-link u-link site-int-link" href="//meetings.ihg.com" target="_blank">Meetings</a>
+</li>
+<li class="brandNav-list-item u-list-item">
+<a class="brandNav-link u-link site-int-link" href="//www.ihg.com/content/us/en/about/brands">Our Brands</a>
+</li>
+<li class="brandNav-list-item u-list-item">
+<a class="brandNav-link u-link site-int-link" href="//www.ihg.com/rewardsclub/content/us/en/home">IHG® Rewards Club</a>
+</li>
+</ul>
+</nav>
+<a class="booknow" href="#"><span>Book Now</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- UHF : Desktop : END of brand nav -->
+<!-- END : Only UBE Brand Nav -->
+<!-- UHF : END of Brand navigation bar markup -->
+</header><div class="uhf-walletPushOver" id="applicationWrapper">
+<div id="topOfPage"></div>
+<script src="//www.ihg.com/static/uhf/brands/us/en/uhf.min.2018090501.js"></script>
+<!-- <div ng-app="findHotelApp" th:attr="ng-strict-di=true" class="bookingFlow"> -->
+<style type="text/css">
+		.bookingFlow {
+			min-height: 90vh;
+			position: relative;
+		}
+	</style>
+<div class="bookingFlow" ng-jq="uhf_jQuery">
+<!-- APPLICATION - VIEW -->
+<div dir="ltr" ui-view="">
+<style type="text/css">
+				@keyframes loading-spinner {
+					0% {
+						-webkit-transform: translate(-50%, -50%) rotate(0deg);
+						transform: translate(-50%, -50%) rotate(0deg);
+					}
+					100% {
+						-webkit-transform: translate(-50%, -50%) rotate(360deg);
+						transform: translate(-50%, -50%) rotate(360deg);
+					}
+				}
+
+				@-webkit-keyframes loading-spinner {
+					0% {
+						-webkit-transform: translate(-50%, -50%) rotate(0deg);
+						transform: translate(-50%, -50%) rotate(0deg);
+					}
+					100% {
+						-webkit-transform: translate(-50%, -50%) rotate(360deg);
+						transform: translate(-50%, -50%) rotate(360deg);
+					}
+				}
+
+				.loading-spinner {
+					position: relative;
+				}
+
+				.loading-spinner div,
+				.loading-spinner div:after {
+					position: absolute;
+					width: 70px;
+					height: 70px;
+					border: 11px solid #ebebeb;
+					border-top-color: transparent;
+					border-radius: 50%;
+				}
+
+				.loading-spinner div {
+					-webkit-animation: loading-spinner 2.5s linear infinite;
+					animation: loading-spinner 2.5s linear infinite;
+					top: 50px;
+					left: 100px;
+				}
+
+				.loading-spinner div:after {
+					-webkit-transform: rotate(90deg);
+					transform: rotate(90deg);
+				}
+
+				.loading-spinner {
+					width: 196px !important;
+					height: 196px !important;
+					margin: 0 auto;
+					-webkit-transform: translate(-98px, -98px) scale(0.98) translate(98px, 98px);
+					transform: translate(-98px, -98px) scale(0.98) translate(98px, 98px);
+				}
+			</style>
+<div class="body-spinner-container">
+<div class="loading-spinner">
+<div></div>
+</div>
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+<script>
+				
+				var domain = location.hostname;
+				if(domain.indexOf("www.ihg.com") === -1){
+					var ifrm = document.createElement('iframe');
+					ifrm.setAttribute("style", "display:none;");
+					ifrm.setAttribute('id', 'ihgdomain'); // assign an id
+					// assign url
+					var env = domain.split('.').length === 4 ? domain.split('.')[0]+"." : "";
+					env = domain === "localhost" ? "localhost" : env+"www.ihg.com";
+					document.body.appendChild(ifrm); // to place at end of document
+					ifrm.setAttribute('src', 'https://'+env+'/resources/us/en/find-hotels/dist/fragments/crossdomain.html');
+				}
+			</script>
+<script>
+			// TODO: Relocate into Application Config for Find Hotel module
+
+			(function () {
+				try {
+					angular.module('findHotelApp')
+						.constant('appConfig', AppConfig)
+						.config(function ($animateProvider) {
+							$animateProvider.classNameFilter(/^((?!(no-nganimate)).)*$/);
+						})
+						.run(function ($rootScope, appConfig) {
+							$rootScope.appConfig = appConfig;
+						});
+					angular.module('findHotelApp.routes')
+						.constant('appConfig', AppConfig);
+
+                    var featureToggleRequestURL = AppConfig.featureToggle.url;
+                    var featureToggleRequestTimeout = AppConfig.featureToggle.timeout;
+                    var findHotelsTeamVMCookieName = "find-hotels";
+                    var environmentQueryParam = "?environment=";
+
+                    if(featureToggleRequestURL.indexOf(environmentQueryParam)=== -1){
+                        var findHotelsTeamVMCookieValue = getCookie(findHotelsTeamVMCookieName);
+                        if(findHotelsTeamVMCookieValue != -1){
+                            featureToggleRequestURL= featureToggleRequestURL.concat(environmentQueryParam + findHotelsTeamVMCookieValue);
+                        }
+                    }
+                    angular.element(document).ready(function() {
+						var customFeatureToggles = sessionStorage ? sessionStorage.getItem('customFeatureToggles-find-hotels') : null;
+						if (customFeatureToggles) {
+							window.angularFeaturesConf = JSON.parse(customFeatureToggles);
+							angular.bootstrap(document, ['findHotelApp']);
+							return;
+						}
+
+                        timeout(featureToggleRequestTimeout,fetch(featureToggleRequestURL,{
+                            method: 'GET',
+                            credentials: 'include',
+                            headers: new Headers({
+                            'x-ihg-api-key':  AppConfig.featureToggle.apiKey
+                        })})).then(function(response) {
+                            if (!response.ok) {
+                                throw new Error('Error in the fetch operation: Status-' + response.status + ' Message-' + response.statusText + ' RequestUrl-' + featureToggleRequestURL);
+                            }
+                            return response.json();
+                        }).then(function(features) {
+							customFeatureToggles = window['targetFeatureToggles-find-hotels'];
+							for (var attrname in customFeatureToggles) {
+								features[attrname] = customFeatureToggles[attrname];
+							}
+                            window.angularFeaturesConf = features;
+                            angular.bootstrap(document, ['findHotelApp']);
+                        }).catch (function(error) {
+                            /* Bootstrapping Find Hotel Application when the features toggle fetch fails */
+							customFeatureToggles = window['targetFeatureToggles-find-hotels'];
+							if (customFeatureToggles) {
+								window.angularFeaturesConf = customFeatureToggles;
+							}
+                            console.log(error.message);
+                            angular.bootstrap(document, ['findHotelApp']);
+                        });
+                    });
+                } catch (err) {
+                    console.error('SPA Find Hotel App - angularJS Files not loaded. Err: ' + err);
+                    window.location.href = AppConfig.shtfURL;
+                }
+
+                function getCookie(cname) {
+                    var name = cname + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var ca = decodedCookie.split(';');
+                    //<![CDATA[
+                    for(var i = 0; i < ca.length; i++) {
+                        var c = ca[i];
+                        while (c.charAt(0) == ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    //]]>
+                    return -1;
+                }
+
+                function timeout(ms, promise) {
+                    return new Promise(function(resolve, reject) {
+                        setTimeout(function() {
+                            reject(new Error("The requested feature toggle call has reached its timeout threshold."))
+                        }, ms)
+                        promise.then(resolve, reject)
+                    })
+                }
+
+			}());
+		</script>
+</div>
+</div><!-- UHF: Start of Footer bar-->
+<footer class="uhf-6c uhf_headerFooter sl_whiteout" id="uhf_footerWrapper"><div class="footerWrap">
+<div class="container contentContainer">
+<!-- container fluid -->
+<div class="row">
+<div class="col-xs-12 col-ihg-tablet-4 col-sm-3 stackingModule socialMedia">
+<h5 class="brandNav__heading">
+							Social Media</h5>
+<ul class="list-inline social">
+<li class="socialElement">
+<a class="socialElement__icon uhf_facebook" href="https://www.facebook.com/ihg" target="_blank" title="Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li class="socialElement">
+<a class="socialElement__icon uhf_twitter" href="https://twitter.com/IHG" target="_blank" title="Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="hrCol col-xs-12 visible-xs-block">
+<hr class="footerHr visible-xs-block"/>
+</div>
+<div class="footer-brandNav col-xs-12 col-ihg-tablet-8 col-sm-9 stackingModule marketingNav">
+<div class="navColumns">
+<div class="colOne">
+<div class="navHeaders">
+<div class="brandNav__heading colOneheader">
+										
+											Company</div>
+</div>
+<span class="brandNav__navItem first-xs">
+<a href="http://careers.ihg.com/" title="IHG Careers">
+																				IHG Careers</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a href="//www.ihg.com/destinations/us/en/explore" title="Explore Hotels">
+																				Explore Hotels</a>
+</span>
+<span class="brandNav__navItem first-xs">
+<a href="//www.ihg.com/hotels/us/en/global/about/brands" title="IHG Global Brands">
+																				IHG Global Brands</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a href="http://partnerconnect.ihg.com/" target="_blank" title="Affiliate Programme">
+																				Affiliate Programme</a>
+</span>
+<span class="brandNav__navItem first-xs">
+<a href="http://www.ihgagent.com/portal/server.pt?open=512&amp;objID=11273&amp;PageID=0&amp;cached=true&amp;mode=2" target="_blank" title="IHG Agent">
+																				IHG Agent</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a class="utilityNav-link u-link nav-middle footer_Customer_Care uhfpopup" href="javascript:void(0);" title="Need Help?">
+                                                                            Need Help?</a>
+</span>
+</div>
+<div class="colTwo">
+<span class="brandNav__navItem first-xs">
+<a href="//www.roomkey.com/" target="_blank" title="RoomKey.com">
+																				RoomKey.com</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a href="//www.ihg.com/rewardsclub/us/en/emailoffers/home" title="Email Management">
+																				Email Management</a>
+</span>
+<span class="brandNav__navItem first-xs">
+<a href="//www.ihg.com/armyhotels/hotels/us/en/reservation" title="IHG Army Hotels">
+																				IHG Army Hotels</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a href="//www.ihg.com/hotels/us/en/global/customer_care/travel_advisory" title="Travel Advisory">
+																				Travel Advisory</a>
+</span>
+<span class="brandNav__navItem first-xs">
+<a href="https://www.ihg.com/rewardsclub/us/en/account/memberMaterials" title="Member Materials">
+																				Member Materials</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a href="https://blog.ihg.com/?utm_source=ihgsite&amp;utm_medium=footer&amp;utm_campaign=IHG-FTR" target="_blank" title="IHG Blog">
+																				IHG Blog</a>
+</span>
+<span class="brandNav__navItem first-xs">
+<a href="https://www.ihgplc.com" target="_blank" title="IHG Corporate">
+																				IHG Corporate</a>
+</span>
+</div> <div class="colThree">
+<span class="brandNav__navItem second-xs">
+<a href="//www.ihg.com/hotels/us/en/global/customer_care/member-tc" title="Member Terms and Conditions">
+																					Member Terms and Conditions</a>
+</span>
+<a href="https://www.ihg.com/content/us/en/customer-care/privacy_statement#3rd-party" rel="nofollow" target="_blank" title="AdChoices">
+                                                                            	AdChoices<img class="adChoiceImage" src="//ihg.scene7.com/is/image/ihg/uhf_AdChoices_12x12?fmt=png-alpha"/>
+</a>
+<span class="brandNav__navItem second-xs">
+<a href="//www.ihg.com/content/us/en/customer-care/tc.html" title="Terms of Use">
+																					Terms of Use</a>
+</span>
+<span class="brandNav__navItem first-xs">
+<a href="https://www.ihg.com/content/us/en/customer-care/privacy_statement#16" title="Privacy Statement and Cookie Usage">
+																					Privacy Statement and Cookie Usage</a>
+</span>
+<span class="brandNav__navItem second-xs">
+<a href="//www.ihg.com/hotels/us/en/global/support/site_map" title="Site Map">
+																					Site Map</a>
+</span>
+</div> </div>
+</div>
+<div class="hrCol col-xs-12 visible-xs-block">
+<hr class="footerHr visible-xs-block"/>
+</div>
+</div>
+<!-- START : Top Destination -->
+<div class="row topDestinationsContainer">
+<div class="stackingModule col-xs-12">
+<div class="topDestinations show-destinationsList" id="topDestinations">
+<div class="destinationsToggle" id="destinationsToggle">
+<i id="topDestinationsIcon"></i>
+<strong>
+										Top Destinations</strong>
+</div>
+<ul class="destinationsList list-unstyled list-inline small" id="destinationsList">
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/tennessee/nashville-hotels" title="Nashville, TN Hotels">Nashville, TN Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/illinois/chicago-hotels" title="Chicago Hotels">Chicago Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/texas/dallas-hotels" title="Dallas Hotels">Dallas Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/hawaii/honolulu-hotels" title="Honolulu Hotels">Honolulu Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/texas/houston-hotels" title="Houston Hotels">Houston Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/california/los-angeles-hotels" title="Los Angeles Hotels">Los Angeles Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/new-york/new-york-city-hotels" title="NYC Hotels">NYC Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/florida/orlando-hotels" title="Orlando Hotels">Orlando Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/california/san-francisco-hotels" title="San Francisco Hotels">San Francisco Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-states/district-of-columbia/washington-hotels" title="Washington DC Hotels">Washington DC Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/attractions/61-reliant-stadium-houston-hotels" title="Hotels near Reliant Stadium">Hotels near Reliant Stadium</a>
+</li>
+<li class="destinationElement">
+<a href="https://www.ihg.com/destinations/us/en/spain/barcelona-hotels" title="Barcelona Hotels">Barcelona Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-kingdom/london-hotels" title="London Hotels">London Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/attractions/133-eiffel-tower-paris-hotels" title="Hotels near Eiffel Tower">Hotels near Eiffel Tower</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/united-arab-emirates/dubai-hotels" title="Dubai Hotels">Dubai Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/australia/sydney-hotels" title="Sydney Hotels">Sydney Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/netherlands/amsterdam-hotels" title="Amsterdam Hotels">Amsterdam Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/canada/ontario-hotels" title="Toronto Hotels">Toronto Hotels</a>
+</li>
+<li class="destinationElement">
+<a href="//www.ihg.com/destinations/us/en/china/shanghai-hotels" title="Shanghai Hotels">Shanghai Hotels</a>
+</li>
+<li class="destinationElement destiationElement--lastChild">
+<a href="http://blog.ihg.com/" target="_blank" title="IHG Travel Blog">IHG Travel Blog</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- END : Top Destination -->
+<!-- START : Resdirect & App -->
+<div class="row">
+<div class="col-xs-12 col-ihg-tablet-8 col-sm-9 bpgResDirectWrapper">
+<div class="stackingModule BPGstackingModule">
+<span class="drawer-toggle" data-target="#BPGdrawer" data-toggle="drawer">
+<img alt="Best price" class="footer-bpg" src="//ihg.scene7.com/is/image/ihg/ihg-bpg-en-tagline?fmt=png-alpha">
+</img></span>
+</div>
+<div class="resDirectCol stackingModule">
+<p class="resDirectText">
+							 Book online or call: <br/>
+<a class="resDirectNum" data-uhf-hook="resDirectNumber" href="tel:18778343613">1 877 834 3613</a>
+</p>
+<p class="resDirectDisclaimer" data-uhf-hook="resDirectMessage" hidden="true">
+<span>Costs 13p per minute + phone company's access charge</span>
+<a class="tooltipQuestion hasBlankPopover" data-animation="true" data-content="Calls to 0871 numbers, when dialed from the UK, cost 13p per minute. Standard network rates apply. Calls from mobiles will be higher." data-placement="top" data-toggle="popover" data-trigger="focus" href="javascript:void(0);" tabindex="0">
+<i class="fa fa-question-circle"></i>
+</a>
+</p>
+</div>
+</div>
+<div class="col-xs-12 col-ihg-tablet-4 col-sm-3 stackingModule ourAppsWrapper">
+<div class="row">
+<div class="col-xs-12 col-ihg-tablet-12 col-sm-12">
+<div class="ourApps">
+<div class="row">
+<div class="col-xs-12 col-ihg-tablet-12 col-sm-12">
+<a href="http://go.onelink.me/ihg?pid=global_desktop&amp;c=global_desktop_us_en_footer&amp;af_web_dp=http%3A%2F%2Fwww.ihg.com%2Fhotels%2Fus%2Fen%2Fglobal%2Foffers%2Fmobile&amp;cm_sp=OSMGL-US-EN-MAN-Footer-AppDownload" target="_blank" title="Available on the App Store">
+<img alt="Available on the App Store" class="iosApp" src="//ihg.scene7.com/is/image/ihg/uhf_ios_badge_en_us?fmt=png-alpha">
+</img></a>
+<a href="http://go.onelink.me/ihg?pid=global_desktop&amp;c=global_desktop_us_en_footer&amp;af_web_dp=http%3A%2F%2Fwww.ihg.com%2Fhotels%2Fus%2Fen%2Fglobal%2Foffers%2Fmobile&amp;cm_sp=OSMGL-US-EN-MAN-Footer-AppDownload" target="_blank" title="Android App on Google Play">
+<img alt="Android App on Google Play" class="androidApp" src="//ihg.scene7.com/is/image/ihg/uhf_android_badge_en_us?fmt=png-alpha">
+</img></a>
+</div>
+</div>
+<span class="ourAppsText socialElement__text--ourApps socialElement__text">
+<b>For Wherever Life Takes You</b><br/><a class="coloredLink" href="//www.ihg.com/content/us/en/support/mobile">Learn more </a>about our free apps and mobile websites</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END : Resdirect & App -->
+<!-- Start BPG Drawer -->
+<div class="row">
+<div class="col-xs-12">
+<div class="drawer" id="BPGdrawer">
+<div class="BPGdrawerOuter drawer-outer">
+<div class="drawer-content">
+<div class="BPGdrawerModule">
+<a aria-label="Close" class="BPGdrawer-close drawer-close" data-dismiss="drawer" href="javascript:void(0);" rel="nofollow">
+<i aria-hidden="true" class="fa fa-times-circle"></i>
+</a>
+<div class="BPGdrawer-item">
+<h5 class="BPGdrawer-heading">Book With Us Advantage</h5>
+</div>
+<div class="BPGdrawer-item">
+<a class="BPGdrawer-titleLink" href="//www.ihg.com/hotels/us/en/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-EN-BPG" rel="nofollow">Best Price Guarantee</a>
+<p class="BPGdrawer-copy">We promise you the lowest available price online, or we’ll match it and give you five times the IHG® Rewards Club points, up to a 40,000-point maximum.</p>
+</div>
+<div class="BPGdrawer-item">
+<a class="BPGdrawer-titleLink" href="//www.ihg.com/hotels/us/en/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-EN-BPG" rel="nofollow">Online Reservation Guarantee</a>
+<p class="BPGdrawer-copy">Your room is guaranteed.</p>
+</div>
+<div class="BPGdrawer-item">
+<a class="BPGdrawer-titleLink" href="//www.ihg.com/hotels/us/en/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-EN-BPG" rel="nofollow">No Booking Fees!</a>
+<p class="BPGdrawer-copy">We do not charge any booking fees for making reservations directly with us.</p>
+</div>
+<div class="BPGdrawer-item">
+<a class="BPGdrawer-titleLink" href="//www.ihg.com/hotels/us/en/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-EN-BPG" rel="nofollow">Data Privacy and Site Security</a>
+<p class="BPGdrawer-copy">IHG takes your privacy seriously and works to protect you. All personal information you provide is encrypted and secure.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End BPG Drawer -->
+</div>
+</div>
+<div class="footer-brandBarModal__backdrop" id="footer-brandBarModule">
+<div class="footer-brandBarModal__dialog">
+<div class="footerWrap">
+<div class="container">
+<!-- container fluid -->
+<div class="row">
+<div class="col-xs-12">
+<span class="footer-brandBarModal__close" id="footer-brandBarModal__close">
+<i class="fa fa-close"></i>
+</span>
+</div>
+</div>
+<div class="row">
+<div class="col-ihg-tablet-12 col-sm-12">
+<nav class="footer-brandBar">
+<div class="footer-brandsCol footer-brandBar__col">
+<div class="footer-brandBarItem-6c footer-brandBarItem">
+<a class="footer-brandBar-link-6c brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/hotels/us/en/reservation" title="Selecting will reload the IHG Website in this browser window.">IHG</a>
+</div>
+<div class="footer-brandBarItems">
+<div class="footer-brandBarItem-ic footer-brandBarItem">
+<a class="brandBar-link-ic brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/intercontinental/hotels/us/en/reservation" title="Selecting will reload the InterContinental Hotels &amp; Resorts Website in this browser window.">Selecting will reload the InterContinental Hotels &amp; Resorts Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-ki footer-brandBarItem">
+<a class="brandBar-link-ki brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/kimptonhotels/hotels/us/en/reservation" title="Selecting will reload the Kimpton® Hotels &amp; Restaurants Website in this browser window.">Selecting will reload the Kimpton® Hotels &amp; Restaurants Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-ul footer-brandBarItem">
+<a class="brandBar-link-ul brandBar-link footer-brandBar-link" data-cookie-trigger="" href="//www.ihg.com/hualuxe/hotels/us/en/reservation" title="Selecting will reload the HUALUXE Hotels &amp; Resorts Website in this browser window.">Selecting will reload the HUALUXE Hotels &amp; Resorts Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-hi footer-brandBarItem">
+<a class="brandBar-link-hi brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinn/hotels/us/en/reservation" title="Selecting will reload the Holiday Inn Website in this browser window.">Selecting will reload the Holiday Inn Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-ex footer-brandBarItem">
+<a class="brandBar-link-ex brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinnexpress/hotels/us/en/reservation" title="Selecting will reload the Holiday Inn Express Hotels Website in this browser window.">Selecting will reload the Holiday Inn Express Hotels Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-va footer-brandBarItem">
+<a class="brandBar-link-va brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/avidhotels/hotels/us/en/reservation" title="Selecting will reload the avid hotels Website in this browser window.">Selecting will reload the avid hotels Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-in footer-brandBarItem">
+<a class="brandBar-link-in brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/hotelindigo/hotels/us/en/reservation" title="Selecting will reload the Hotel Indigo Website in this browser window.">Selecting will reload the Hotel Indigo Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-vn footer-brandBarItem">
+<a class="brandBar-link-vn brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/evenhotels/hotels/us/en/reservation" title="Selecting will reload the EVEN Hotels Website in this browser window.">Selecting will reload the EVEN Hotels Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-cp footer-brandBarItem">
+<a class="brandBar-link-cp brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/crowneplaza/hotels/us/en/reservation" title="Selecting will reload the Crowne Plaza Hotels &amp; Resorts Website in this browser window.">Selecting will reload the Crowne Plaza Hotels &amp; Resorts Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-cv footer-brandBarItem">
+<a class="brandBar-link-cv brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinnclubvacations/hotels/us/en/reservation" title="Selecting will reload the Holiday Inn Club Vacations Website in this browser window.">Selecting will reload the Holiday Inn Club Vacations Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-rs footer-brandBarItem">
+<a class="brandBar-link-rs brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinnresorts/hotels/us/en/reservation" title="Selecting will reload the Holiday Inn Resort Hotels Website in this browser window.">Selecting will reload the Holiday Inn Resort Hotels Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-sb footer-brandBarItem">
+<a class="brandBar-link-sb brandBar-link footer-brandBar-link" data-cookie-trigger="" href="//www.ihg.com/staybridge/hotels/us/en/reservation" title="Selecting will reload the Staybridge Suites Website in this browser window.">Selecting will reload the Staybridge Suites Website in this browser window.</a>
+</div>
+<div class="footer-brandBarItem-cw footer-brandBarItem">
+<a class="brandBar-link-cw brandBar-link footer-brandBar-link" data-cookie-trigger="" href="//www.ihg.com/candlewood/hotels/us/en/reservation" title="Selecting will reload the Candlewood Suites Website in this browser window.">Selecting will reload the Candlewood Suites Website in this browser window.</a>
+</div>
+<div class="clearfix visible-ihg-tablet-block"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="footer-rewardsCol footer-brandBar__col">
+<div class="footer-brandBarItem--rewards">
+<a class="footer-brandBar-link--rewards brandBar-link" href="//www.ihg.com/rewardsclub/content/us/en/home" title="Selecting opens the IHG Rewards Club Website in this browser window.">Rewards Club</a>
+</div>
+</div>
+<div class="clearfix"></div>
+</nav>
+</div>
+</div>
+<div class="row">
+<div class="visible-xs col-ihg-tablet-12 col-sm-12">
+<p class="brandBarTagLine" id="brandBarTagline">Explore Our IHG Family of Brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footerWrap">
+<div class="container lozengeContainer">
+<div class="row">
+<div class="col-xs-12">
+<div class="brandBarLozengeModule">
+<p class="lozengeTagLine" id="lozengeTagline">Explore Our IHG Family of Brands</p>
+<div class="brandBarLozenge">
+<a href="javascript:void(0);" id="footer-brandBarModalToggle">
+<img alt="Explore Our IHG Family of Brands" class="brandBarLozengeInner" src="//ihg.scene7.com/is/image/ihg/uhf_ihg_logo@2x-1?fmt=png-alpha">
+</img></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="brand-color-bkg">
+<div class="footerWrap">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="footer-copyrightBlock">
+<small class="footer-copyrightText">© 2018 IHG. All rights reserved. Most hotels are independently owned and operated.</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- UHF : FOOTER : START : EU Cookie + extras -->
+<div class="euCookieContainer" id="dialog-euCookie">
+<div class="euCookieContent">
+<div class="euCookieCloseIcon">
+<i class="fa fa-times"></i>
+</div>
+<div class="euCookieText">
+<div class="text parbase LinkMorpher">
+<h3>Cookie Usage and Settings</h3>
+<p>The standard cookie policy for this website is to allow all cookies. This helps to ensure you have the optimal experience. If you would like to continue with our optimal website experience, you don't need to make any changes. If you would like to <a class="underLine" href="/content/gb/en/customer-care/privacy_statement">learn more about how we use cookies</a> or change your settings, you can use the link at the bottom of any page at any time.</p>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="backdrop-transparent uhfSharedDialog modal" id="modal0871Disclaimer" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<p data-uhf-hook="resDirectMessage">Calls to 0871 numbers, when dialed from the UK, cost 13p per minute. Standard network rates apply. Calls from mobiles will be higher.</p>
+</div>
+<div class="modal-footer">
+<a class="btn btn-primary" data-no-replace="content" data-uhf-hook="resDirectNumber" href="tel:18774242449">Call</a>
+<button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+<div id="dialog-ajaxDefaultError">
+<div class="ajaxDefaultError-Container">
+<div class="errorIcon-container">
+<i class="fa fa-exclamation-circle"></i>
+</div>
+<div class="errorMessage-container">
+<div class="errorMsg">We are sorry, our system is temporarily unavailable.  Please try again later or contact the <a href="/hotels/us/en/customer-care/contact-us">IHG<sup>®</sup> Rewards Club Customer Care Center</a> for assistance.</div>
+</div>
+</div>
+</div>
+<div hidden="true" id="ssoImagesDiv"></div>
+<form action="" hidden="true" id="tpiDivForm" method="POST">
+<input name="displayCaptcha" type="hidden" value="true"/>
+<input id="fwdest" name="fwdest" type="hidden" value=""/>
+</form>
+<!-- UHF : FOOTER : END : EU Cookie + extras -->
+<!-- UHF : FOOTER : START : Brazillian Consent -->
+<div aria-hidden="true" aria-labelledby="BrazilianConsent" class="uhfSharedDialog modal sl_whiteout" id="modalBrazilianConsent" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+<div class="brazilConsentHeaderBackground">
+</div>
+</div>
+<div class="modal-body">
+<p><span class="bold">
+				Você está deixando nosso website da IHG<sup>®</sup> em Português para o Brasil e entrando na versão em Inglês do nosso website para as marcas:</span><br><br/>InterContinental, Holiday Inn® Hotels &amp; Resorts,  Holiday Inn Club Vacations®, Holiday Inn Express® Hotels, Crowne Plaza® Hotels &amp; Resorts, Hotel Indigo®, HUALUXE™ Hotels e Resorts, EVEN™ Hotels, Candlewood Suites®,Staybridge Suites®  e IHG® Rewards Club.</br></p>
+<p>Você gostaria de visita a IHG.com Brasil para continuar em Português?</p>
+</div>
+<div class="modal-footer">
+<a class="btn btn-primary" href="//www.ihg.com/hotels/pt/pt/reservation" type="button">Sim</a>
+<button class="btn btn-default" data-dismiss="modal" id="handleCLYes" type="button" value="Yes">Não</button>
+</div>
+</div>
+</div>
+</div>
+<!-- UHF : FOOTER : END : Brazillian Consent -->
+<!-- UHF : START : FOOTER : Korean consent -->
+<!-- UHF : END : FOOTER : Korean consent -->
+</footer>
+<div id="bottomOfPage"></div>
+<script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]); _cf.push(['_setBm', true]);</script><script src="/_bm/bd-1-30" type="text/javascript"></script></body>
